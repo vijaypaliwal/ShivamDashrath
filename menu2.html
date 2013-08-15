@@ -1,0 +1,41 @@
+<html> 
+    <head> 
+        <title>Slider Stop</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1.5 user-scalable=yes">
+        <script>
+            $(document).on("swiperight", ".listitem", function() {
+                $.mobile.changePage(".page1");
+				 $.mobile.metaViewportContent = "width=device-width, minimum-scale=1, maximum-scale=2";
+            });
+			
+			
+        </script>
+    </head> 
+    <body>
+        <div data-role="page" id="home">
+            <div data-role="content">
+                <p>
+                    <ul data-role="listview" data-inset="true" data-theme="c">
+                        <li class="listitem">Swipe Right to view Page 1</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div data-role="page" class="page1">
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true" data-theme="c">
+                    <li data-role="list-divider">Navigation</li>
+                    <li><a href="#home">Back to the Home Page</a></li>
+                </ul>
+                <p>
+                    Yeah!<br />You Swiped Right to view Page 1
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
