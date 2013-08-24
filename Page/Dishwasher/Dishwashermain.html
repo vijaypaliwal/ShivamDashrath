@@ -4,13 +4,13 @@
 
 <script type="application/javascript" src="../../iscroll.js"></script>
 
-<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi" />
+
 
 <script type="text/javascript">
 
     function loaded() {
         setTimeout(function () {
-            myScroll = new iScroll('wrapper', { zoom: true, bounce:false });
+            myScroll = new iScroll('wrapper', { zoom: true });
         }, 300);
     }
     document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
@@ -126,9 +126,9 @@
         <ul data-role="listview" data-inset="true" data-theme="f">
 
             <li><a data-ajax="false" href="../../index.html" title="Washer menu">Washer</a></li>
-            <li><a data-ajax="false" href="../../Page/Dryer/Dryerhistory.html" title="Dryer menu">Dryer</a></li>
+             <li><a data-ajax="false" href="../../Page/Dryer/Dryerhistory.html" title="Dryer menu">Dryer</a></li>
             <li><a data-ajax="false" href="Dishwasherhistory.html" title="Dishwasher menu">Dishwasher</a></li>
-            <li><a data-ajax="false" href="../../bottom.html" title="Microwave menu">Microwave</a></li>
+            <li><a data-ajax="false" href="../../Page/Microwave/Microwavehistory.html" title="Dryer menu">Microwave</a></li>
         </ul>
 
     </div>
