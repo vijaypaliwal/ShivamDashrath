@@ -5,19 +5,15 @@
 
 <script type="application/javascript" src="iscroll.js"></script>
 
-
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi" />
 
 <script type="text/javascript">
 
-    var scrollContent,
-        scrollNav;
-
     function loaded() {
         setTimeout(function () {
-            myScroll = new iScroll('wrapper', {zoom:true, bounce:false});
+            myScroll = new iScroll('wrapper', { zoom: true, bounce: false, snap: true });
         }, 300);
     }
-
     document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
     document.addEventListener('DOMContentLoaded', loaded, false);
@@ -56,8 +52,8 @@
     {
         position: absolute;
         z-index: 1;
-        top: 50px;
-        bottom: 80px;
+        top: 0px;
+        bottom: 0px;
         left: 0;
         width: 100%;
     }
@@ -116,9 +112,9 @@ you had to do was pull a plug and the water dumped out onto the ground.”
         <ul data-role="listview" data-inset="false" data-theme="b">
 
             <li><a data-ajax="false" href="index.html" title="Washer menu">Washer</a></li>
-            <li><a data-ajax="false" href="main.html" tag="Refrig.html" title="Dryer menu">Dryer</a></li>
-            <li><a data-ajax="false" href="toploader.html" title="Dishwasher menu">Dishwasher</a></li>
-            <li><a data-ajax="false" href="bottom.html" title="Microwave menu">Microwave</a></li>
+           <li><a data-ajax="false" href="Page/Dryer/Dryerhistory.html"  title="Dryer menu">Dryer</a></li>
+            <li><a data-ajax="false" href="Page/Dishwasher/Dishwasherhistory.html" title="Dishwasher menu">Dishwasher</a></li>
+            <li><a data-ajax="false" href="Page/Dishwasher/Microwavehistory.html" title="Microwave menu">Microwave</a></li>
         </ul>
 
     </div>

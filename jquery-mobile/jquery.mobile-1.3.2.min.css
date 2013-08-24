@@ -6067,3 +6067,37 @@ div.ui-slider-switch
 }
 
 
+
+
+
+/*Custome*/
+
+
+#mypanel
+	{
+	   background:url('bg.png') repeat;
+       text-align:center;
+       color:white !important;
+       letter-spacing:2px;
+       font-weight:normal;
+	}
+
+        /*#mypanel ul {
+            border:8px solid #2c0202;
+            padding:5px;
+            background-color:green;
+            list-style:none;
+            
+        }
+            #mypanel ul li {
+                  padding:10px;
+            }
+            #mypanel ul li a{
+                  font-weight:normal;
+                  text-decoration:none;color:white;
+                  font-size:12px;
+            }
+                #mypanel ul li:hover {
+                    background-color:ActiveBorder;
+                }*/
+
