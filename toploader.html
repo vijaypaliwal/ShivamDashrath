@@ -13,14 +13,10 @@
     <script type="text/javascript">
 
         var myScroll;
-        function loaded() {
-            setTimeout(function () {
-                myScroll = new iScroll('wrapper');
-            }, 1000);
-        }
-
-        //    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-
+        setTimeout(function () {
+            myScroll = new iScroll('wrapper', { zoom: true, bounce: false });
+        }, 200);
+        // document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
         document.addEventListener('load', loaded, false);
 
     </script>
@@ -39,8 +35,8 @@
 
         #header
         {
-            position: fixed;
-            color: #000;
+           
+            color: #fff;
             text-align: center;
             font-size: 20px;
             margin-bottom: 100px;
@@ -76,9 +72,9 @@
 <body>
     <div data-role="page">
   
-       <div id="header" data-role="header" >
+       <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
             <h1>Washer</h1>
-            <a href="#mypanel" data-role="button" data-theme="b" data-iconpos="notext" data-icon="grid">Open</a>
+            <a href="#mypanel" data-role="button" data-theme="b" >menu</a>
         </div>
 
     

@@ -11,24 +11,19 @@
 
     <script type="text/javascript">
 
-        var scrollContent,
-            scrollNav;
-
-        function loaded() {
-            scrollContent = new iScroll('wrapper', { zoom: true });
-            scrollNav = new iScroll('wrapper');
-        }
-
-        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-
-        document.addEventListener('DOMContentLoaded', loaded, false);
+        var myScroll;
+        setTimeout(function () {
+            myScroll = new iScroll('wrapper', { zoom: true, bounce: false });
+        }, 200);
+        // document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        document.addEventListener('load', loaded, false);
 
 </script>
 
     <style>
         #footer
         {
-            position: absolute;
+          
             text-align: center;
             width: 100%;
             font-size: 20px;
@@ -39,7 +34,7 @@
 
         #header
         {
-            position: fixed;
+           
             color: #000;
             text-align: center;
             font-size: 20px;
@@ -77,7 +72,7 @@
 <body>
     <div data-role="page" >
 
-           <div id="header" data-role="header" >
+           <div id="header" data-role="header" data-position="fixed" data-tap-toggle="false">
             <h1>Washer</h1>
                 <a href="#mypanel" data-role="button" data-theme="b" data-iconpos="notext" data-icon="grid">Open</a>
         </div>
@@ -118,7 +113,7 @@
             </ul>
 
         </div>
-        <div data-role="footer" id="footer"   role="banner">
+        <div data-role="footer" id="footer"  data-position="fixed" data-tap-toggle="false">
             <h3>  <a style="float:left" data-ajax="false" href="frontloader.html" data-role="button" data-inline="true" data-theme="b">Prev</a>
          <a  style="float:right" data-ajax="false" href="bottom1.html" data-role="button" data-inline="true" data-theme="b">Next</a></h3>  </div>
 
