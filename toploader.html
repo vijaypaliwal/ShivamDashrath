@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.3.2.min.css" />
 <script src="jquery-mobile/jquery-1.9.1.min.js"></script>
 <script src="jquery-mobile/jquery.mobile-1.3.2.min.js"></script>
+      <script type="application/javascript" src="iscroll.js"></script>
 
     <script>
     var myScroll;
@@ -21,17 +22,15 @@ document.addEventListener('DOMContentLoaded', loaded, false);
         </script>
 
     <style>
-          #footer
+        #footer
         {
             position: fixed;
             text-align: center;
-            width:100%;
+            width: 100%;
             font-size: 20px;
+             background-color:rgb(233, 110, 52) !important;
             bottom: 0;
             left: 0;
-            padding: 0;
-            z-index:1000;
-            border-top: 1px solid #444;
         }
 
         #header
@@ -41,40 +40,38 @@ document.addEventListener('DOMContentLoaded', loaded, false);
             text-align: center;
             font-size: 20px;
             margin-bottom: 100px;
+            color:#fff;
             top: 0;
             left: 0;
             width: 100%;
-         
+           background-color:rgb(233, 110, 52) !important;
             padding: 0;
             border-top: 1px solid #444;
         }
 
-        #wrapper {
+        #wrapper
+        {
             position: absolute;
             z-index: 1;
             top: 50px;
-            bottom: 48px;
+         bottom: 80px;
             left: 0;
             width: 100%;
-         
-          
         }
 
-        #scroller {
+        #scroller
+        {
             position: absolute;
             /* -webkit-touch-callout:none;*/
             -webkit-tap-highlight-color: rgba(0,0,0,0);
-          
             padding: 0;
-          
         }
-
     </style>
 
 </head>
 <body>
   
-       <div id="header" data-role="header" data-theme="c">
+       <div id="header" data-role="header" >
             <h1>Washer</h1>
 
         </div>
@@ -89,18 +86,16 @@ document.addEventListener('DOMContentLoaded', loaded, false);
             
                 
                 
-                   <p><img style="height:auto; width:auto;" src="Images/Washer/Washerfrontpart.jpg" alt="" /></p>
+                   <p><img style="height:auto; width:auto;" src="Images/Washer/Washerfrontpart.png" alt="" /></p>
 
             </div>
                 </div>
 
       
 
-        <div data-role="footer" id="footer" data-theme="c" class="ui-header ui-bar-f" role="banner">
-            <h1 class="ui-title" role="heading" aria-level="1">Washer Menu </h1>
-            <a href="main.html" data-transition="flip" class="ui-btn-left ui-btn ui-btn-up-f ui-shadow ui-btn-corner-all ui-btn-icon-notext" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="f" title="Home"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Previous</span><span class="ui-icon ui-icon-arrow-l ui-icon-shadow">&nbsp;</span></span></a>
-            <a href="frontloader.html"  data-transition="flip" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-notext ui-btn-up-f" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="f" title="Search"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Next</span><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></span></a>
-        </div>
+        <div data-role="footer" id="footer"   role="banner">
+            <h3>  <a style="float:left" data-ajax="false" href="main.html" data-role="button" data-inline="true" data-theme="b">Prev</a>
+         <a  style="float:right" data-ajax="false" href="frontloader.html" data-role="button" data-inline="true" data-theme="b">Next</a></h3>  </div>
 
   
 </body>
