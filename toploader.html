@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', loaded, false);
     <style>
         #footer
         {
-            position: fixed;
+            position: absolute;
             text-align: center;
             width: 100%;
             font-size: 20px;
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', loaded, false);
             position: absolute;
             z-index: 1;
             top: 50px;
-         bottom: 80px;
+           bottom: 80px;
             left: 0;
             width: 100%;
         }
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', loaded, false);
   
        <div id="header" data-role="header" >
             <h1>Washer</h1>
-
+            <a href="#mypanel" data-role="button" data-theme="b" data-iconpos="notext" data-icon="grid">Open</a>
         </div>
 
     
@@ -90,7 +90,17 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 
             </div>
                 </div>
+    <div data-role="panel" id="mypanel" data-position="right" data-display="push">
+            <h4>MyMarcone Manual</h4>
+            <ul data-role="listview" data-inset="false" data-theme="b">
 
+                <li><a data-ajax="false" href="index.html"  title="Washer menu">Washer</a></li>
+                <li><a data-ajax="false" href="main.html" tag="Refrig.html" title="Dryer menu">Dryer</a></li>
+                <li><a data-ajax="false" href="toploader.html" title="Dishwasher menu">Dishwasher</a></li>
+                <li><a data-ajax="false" href="bottom.html" title="Microwave menu">Microwave</a></li>
+            </ul>
+
+        </div>
       
 
         <div data-role="footer" id="footer"   role="banner">

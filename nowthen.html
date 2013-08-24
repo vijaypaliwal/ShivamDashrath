@@ -1,29 +1,25 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
-    <title>Untitled Document</title>
- <link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.3.2.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Topload Washer</title>
+<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.3.2.min.css" />
 <script src="jquery-mobile/jquery-1.9.1.min.js"></script>
 <script src="jquery-mobile/jquery.mobile-1.3.2.min.js"></script>
-  <script type="application/javascript" src="iscroll.js"></script>
+      <script type="application/javascript" src="iscroll.js"></script>
 
+    <script>
+    var myScroll;
+function loaded() {
+    myScroll = new iScroll('wrapper', { zoom: true,bounce: false });
+}
 
-    <script type="text/javascript">
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
-        var scrollContent,
-            scrollNav;
-
-        function loaded() {
-            scrollContent = new iScroll('wrapper', { zoom: true });
-            scrollNav = new iScroll('wrapper');
-        }
-
-        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-
-        document.addEventListener('DOMContentLoaded', loaded, false);
-
-</script>
+document.addEventListener('DOMContentLoaded', loaded, false);
+        </script>
 
     <style>
         #footer
@@ -70,44 +66,31 @@
             -webkit-tap-highlight-color: rgba(0,0,0,0);
             padding: 0;
         }
-    </style> 
+    </style>
 
 </head>
-
 <body>
-    <div data-role="page" >
-
-           <div id="header" data-role="header" >
+  
+       <div id="header" data-role="header" >
             <h1>Washer</h1>
-                <a href="#mypanel" data-role="button" data-theme="b" data-iconpos="notext" data-icon="grid">Open</a>
+            <a href="#mypanel" data-role="button" data-theme="b" data-iconpos="notext" data-icon="grid">Open</a>
         </div>
-       
-        <div id="wrapper" data-role="content">
-            <div>
-                <div>
-                </div>
-                 <p style="text-align:center;">
-                    <img style="height:auto; width:auto;" src="Images/Washer/fillvalvepart.jpg" alt="" />
-                </p>
 
-                  <p style="text-align:center;">
-                    <img style="height:auto; width:auto;" src="Images/Washer/pressureswitchpart.jpg" alt="" />
-                </p>
+    
+            <div id="wrapper">
 
-                 <p style="text-align:center;">
-                    <img style="height:auto; width:auto;" src="Images/Washer/motorpart.jpg" alt="" />
-                </p>
+                <div id="scroller">
 
-                  <p style="text-align:center;">
-                    <img style="height:auto; width:auto;" src="Images/Washer/beltpart.jpg" alt="" />
-                </p>
+                <h3>Washer Parts history</h3>
 
+            
                 
+                
+                   <p style="text-align:center;"><img style="height:auto; width:auto;" src="Images/Washer/nowthen.png" alt="" /></p>
 
             </div>
-
-        </div>
-        <div data-role="panel" id="mypanel" data-position="right" data-display="push">
+                </div>
+    <div data-role="panel" id="mypanel" data-position="right" data-display="push">
             <h4>MyMarcone Manual</h4>
             <ul data-role="listview" data-inset="false" data-theme="b">
 
@@ -118,13 +101,12 @@
             </ul>
 
         </div>
-        <div data-role="footer" id="footer"   role="banner">
-            <h3>  <a style="float:left" data-ajax="false" href="frontloader.html" data-role="button" data-inline="true" data-theme="b">Prev</a>
-         <a  style="float:right" data-ajax="false" href="bottom1.html" data-role="button" data-inline="true" data-theme="b">Next</a></h3>  </div>
+      
 
-    </div>
+        <div data-role="footer" id="footer"   role="banner">
+            <h3>  <a style="float:left" data-ajax="false" href="main.html" data-role="button" data-inline="true" data-theme="b">Prev</a>
+         <a  style="float:right" data-ajax="false" href="frontloader.html" data-role="button" data-inline="true" data-theme="b">Next</a></h3>  </div>
+
+  
 </body>
 </html>
-
-
-

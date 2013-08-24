@@ -3,8 +3,6 @@
     <link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.3.2.min.css" />
     <script src="jquery-mobile/jquery-1.9.1.min.js"></script>
     <script src="jquery-mobile/jquery.mobile-1.3.2.min.js"></script>
-
-   
     <script type="application/javascript" src="iscroll.js"></script>
     <script type="text/javascript">
 
@@ -21,7 +19,7 @@
  <style>
         #footer
         {
-            position: fixed;
+            position:absolute;
             text-align: center;
             width: 100%;
             font-size: 20px;
@@ -72,7 +70,7 @@
 
            <div id="header" data-role="header" >
             <h1>Washer</h1>
-
+            <a href="#mypanel" data-role="button" data-theme="b" data-iconpos="notext" data-icon="grid">Open</a>
         </div>
 
         <div data-role="content">
@@ -113,7 +111,7 @@ of the modern automatic washer.”
                     </p>
 
 
-                    <p>
+                  <p style="text-align:center;">
                         <img src="Images/Washer/Firsthistroy.png" alt="" /></p>
                     <div>
                     </div>
@@ -124,6 +122,18 @@ of the modern automatic washer.”
 
     </div>
             </div>
+
+    <div data-role="panel" id="mypanel" data-position="right" data-display="push">
+            <h4>MyMarcone Manual</h4>
+            <ul data-role="listview" data-inset="false" data-theme="b">
+
+                <li><a data-ajax="false" href="index.html"  title="Washer menu">Washer</a></li>
+                <li><a data-ajax="false" href="main.html" tag="Refrig.html" title="Dryer menu">Dryer</a></li>
+                <li><a data-ajax="false" href="toploader.html" title="Dishwasher menu">Dishwasher</a></li>
+                <li><a data-ajax="false" href="bottom.html" title="Microwave menu">Microwave</a></li>
+            </ul>
+
+        </div>
         <div data-role="footer" id="footer"   role="banner">
             <h3>  <a style="float:left" data-ajax="false" href="index.html" data-role="button" data-inline="true" data-theme="b">Prev</a>
          <a  style="float:right" data-ajax="false" href="toploader.html" data-role="button" data-inline="true" data-theme="b">Next</a></h3>  </div>

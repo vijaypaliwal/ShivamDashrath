@@ -1511,6 +1511,7 @@ body.ui-mobile-viewport, div.ui-mobile-viewport
 {
     min-height: 1.1em;
     text-align: center;
+    font-weight :normal;
     font-size: 16px;
     display: block;
     margin: .6em 30% .8em;
