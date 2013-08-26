@@ -7,112 +7,63 @@
 
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi" />
 
-<script type="text/javascript">
-
-    function loaded() {
-        setTimeout(function () {
-            myScroll = new iScroll('wrapper', { zoom: true, bounce: false, snap: true });
-        }, 300);
-    }
-    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-
-    document.addEventListener('DOMContentLoaded', loaded, false);
-
-</script>
-
 <style>
-    #footer
-    {
-       
+    .pagesList {
+        list-style: none;
+        margin: 0 auto;
         text-align: center;
-        width: 100%;
-        font-size: 20px;
-        background-color: rgb(233, 110, 52) !important;
-        bottom: 0;
-        left: 0;
+        margin-top: 71px;
+        padding: 0px;
+        width: 98%;
     }
 
-    #header
-    {
-      
-        color: #000;
-        text-align: center;
-        font-size: 20px;
-        margin-bottom: 100px;
-        color: #fff;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgb(233, 110, 52) !important;
-        padding: 0;
-        border-top: 1px solid #444;
-    }
-
-    #wrapper
-    {
-        position: absolute;
-        z-index: 1;
-        top: 0px;
-        bottom: 0px;
-        left: 0;
-        width: 100%;
-    }
-
-    #scroller
-    {
-        position: absolute;
-        /* -webkit-touch-callout:none;*/
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-        padding: 0;
-    }
+        .pagesList li {
+            position: relative;
+            background-color: white;
+            border: 1px solid #999;
+            margin-bottom:5px;
+            -webkit-box-shadow:  1px 2px 2px 1px rgba(0, 0, 0, 1);
+        
+        box-shadow:  1px 2px 2px 1px rgba(0, 0, 0, 1);
+        }
 </style>
-
 
 <div data-role="page">
     <div data-position="fixed" data-tap-toggle="false" id="header" data-role="header">
-        <h1>Little history</h1>
-        <a href="#mypanel" data-role="button" data-theme="b" >menu</a>
+        <h1>Washer Menu</h1>
+        <a href="#mypanel" data-role="button" data-theme="b">menu</a>
     </div>
-
-
-
 
 
     <div id="wrapper">
         <div id="scroller">
-
-            <p style="text-align: center;">
-                <img style="height: auto; width: auto;" src="Images/Washer/Firsthistroy.png" alt="" />
-            </p>
-
-
-            <p style="text-align: justify; margin-right: 10px; margin-left: 10px;">
-                “Clothes washers have been around for over 200 years, but in the early days they were very
-simple contraptions. What you had was basically a large tub you filled with water that you
-pre-heated with some kind of mechanism that sloshed the clothes around, and a wringer
-that you ran the clothes through to squeeze the water out. Those wringers were no joke,
-they could squash your fingers if you weren’t careful! Emptying the tub was easy though, all
-you had to do was pull a plug and the water dumped out onto the ground.”
-            </p>
+            <ul class="pagesList">
+                <li id="page1">Loading.....</li>
+                <li id="page2">Loading.....</li>
+                <li id="page3">Loading.....</li>
+                <li id="page4">Loading.....</li>
+                <li id="page5">Loading.....</li>
+                <li id="page6">Loading.....</li>
+                <li id="page7">Loading.....</li>
+                <li id="page8">Loading.....</li>
+                <li id="page9">Loading.....</li>
+            </ul>
 
         </div>
 
     </div>
 
 
-   
 
-    <div data-role="footer" id="footer" data-position="fixed" data-tap-toggle="false">
-        <h3><a style="float: left" data-ajax="false" href="index.html" data-role="button" data-inline="true" data-theme="b">Prev</a>
-            <a style="float: right" data-ajax="false" href="main.html" data-role="button" data-inline="true" data-theme="b">Next</a></h3>
-    </div>
+
+
 
     <div data-role="panel" id="mypanel" data-position="right" data-display="push">
         <h4>MyMarcone Manual</h4>
         <ul data-role="listview" data-inset="false" data-theme="b">
 
             <li><a data-ajax="false" href="index.html" title="Washer menu">Washer</a></li>
-           <li><a data-ajax="false" href="Page/Dryer/Dryerhistory.html"  title="Dryer menu">Dryer</a></li>
+            <li><a data-ajax="false" href="Page/Dryer/Dryerhistory.html" title="Dryer menu">Dryer</a></li>
             <li><a data-ajax="false" href="Page/Dishwasher/Dishwasherhistory.html" title="Dishwasher menu">Dishwasher</a></li>
             <li><a data-ajax="false" href="Page/Microwave/Microwavehistory.html" title="Microwave menu">Microwave</a></li>
         </ul>
@@ -124,3 +75,25 @@ you had to do was pull a plug and the water dumped out onto the ground.”
 
 
 
+<script>
+    $(document).ready(function () {
+        for (var i = 0; i < 10; i++) {
+            switch (i) {
+                case 0: loadData("page1", "index.html"); break;
+                case 1: loadData("page2", "Page/Washer/main.html"); break;
+                case 2: loadData("page3", "Page/Washer/menu.html"); break;
+                case 3: loadData("page4", "Page/Washer/toploader.html"); break;
+                case 4: loadData("page5", "Page/Washer/frontloader.html"); break;
+                case 5: loadData("page6", "Page/Washer/bottom.html"); break;
+                case 6: loadData("page7", "Page/Washer/bottom1.html"); break;
+                case 7: loadData("page8", "Page/Washer/nowthen.html"); break;
+                case 8: loadData("page9", "Page/Washer/Popularpart.html"); break;
+            }
+        }
+        myScroll.refresh();
+    });
+    function loadData(id, url) {
+
+        $("#" + id).load(url);
+    }
+</script>
