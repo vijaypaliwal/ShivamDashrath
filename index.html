@@ -1,19 +1,11 @@
 ﻿<title>Little History</title>
 <link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.3.2.min.css" />
-<script src="jquery-mobile/jquery-1.9.1.min.js"></script>
-<script src="jquery-mobile/jquery.mobile-1.3.2.min.js"></script>
 
-<script type="application/javascript" src="iscroll.js"></script>
+
+
 
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi" />
-<script>
-    var myScroll;
-    setTimeout(function () {
-        myScroll = new iScroll('wrapper', { zoom: true });
-    }, 200);
-    // document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-    document.addEventListener('load', loaded, false);
-</script>
+
 
 <style>
     .pagesList {
@@ -37,6 +29,10 @@
 </style>
 
 <div data-role="page">
+
+
+   
+
     <div data-position="fixed" data-tap-toggle="false" id="header" data-role="header">
         <h1>Washer Menu</h1>
         <a href="#mypanel" data-role="button" data-theme="b">menu</a>
@@ -46,6 +42,8 @@
    <div id="wrapper">
         <div id="scroller">
             <ul class="pagesList">
+                <li id="page0">Loading.....</li>
+                <li id="page17">Loading.....</li>
                 <li id="page1">Loading.....</li>
                 <li id="page2">Loading.....</li>
                 <li id="page3">Loading.....</li>
@@ -59,8 +57,11 @@
                 <li id="page11">Loading.....</li>
                 <li id="page12">Loading.....</li>
                 <li id="page13">Loading.....</li>
+                 <li id="page18">Loading.....</li>
                 <li id="page14">Loading.....</li>
+                 <li id="page19">Loading.....</li>
                 <li id="page15">Loading.....</li>
+                 <li id="page20">Loading.....</li>
                 <li id="page16">Loading.....</li>
             </ul>
 
@@ -85,37 +86,48 @@
 
     </div>
 
+      
+
 </div>
 
 
 
-
+<script type="application/javascript" src="iscroll.js"></script>
+<script src="jquery-mobile/jquery-1.9.1.min.js"></script>
+<script src="jquery-mobile/jquery.mobile-1.3.2.min.js"></script>
 <script>
   
        $(document).ready(function () {
            debugger;
 
-           for (var i = 0; i < 16; i++) {
+           for (var i = 0; i < 21; i++) {
+               switch (i) {
         
-               loadData("page1", "index.html");
-               loadData("page2", "Page/Washer/main.html"); 
-               loadData("page3", "Page/Washer/menu.html"); 
-               loadData("page4", "Page/Washer/toploader.html"); 
-               loadData("page5", "Page/Washer/frontloader.html"); 
-               loadData("page6", "Page/Washer/bottom.html"); 
-               loadData("page7", "Page/Washer/bottom1.html"); 
-               loadData("page8", "Page/Washer/Evolution.html"); 
-               loadData("page9", "Page/Washer/Evolution1.html"); 
-               loadData("page10", "Page/Washer/nowthen.html"); 
-               loadData("page11", "Page/Washer/popularpart.html"); 
-               loadData("page12", "Page/Washer/Evolution2.html"); 
-               loadData("page13", "Page/Washer/controlparts.html"); 
-               loadData("page14", "Page/Washer/Brakeclutch.html"); 
-               loadData("page15", "Page/Washer/Agitatorpart.html"); 
-               loadData("page16", "Page/Washer/washerfinal.html"); 
+                   case 0: loadData("page1", "index.html");break;
+                   case 1: loadData("page0", "Page/Washer/washerbasic.html"); break;
+                   case 2: loadData("page17", "Page/Washer/littlehistory.html"); break;
+                   case 3: loadData("page2", "Page/Washer/main.html"); break;
+                   case 4:  loadData("page3", "Page/Washer/menu.html"); break;
+                   case 5:    loadData("page4", "Page/Washer/toploader.html"); break;
+                   case 6:  loadData("page5", "Page/Washer/frontloader.html"); break;
+                   case 7:  loadData("page6", "Page/Washer/bottom.html"); break;
+                   case 8: loadData("page7", "Page/Washer/bottom1.html"); break;
+                   case 9: loadData("page8", "Page/Washer/Evolution.html"); break;
+                   case 10:  loadData("page9", "Page/Washer/Evolution1.html"); break;
+                   case 11:  loadData("page10", "Page/Washer/nowthen.html"); break;
+                   case 12:   loadData("page11", "Page/Washer/popularpart.html"); break;
+                   case 13:    loadData("page12", "Page/Washer/Evolution2.html"); break;
+                   case 14: loadData("page13", "Page/Washer/controlparts.html"); break;
+                   case 15: loadData("page18", "Page/Washer/List1.html"); break;
+                   case 16: loadData("page14", "Page/Washer/Brakeclutch.html"); break;
+                   case 17: loadData("page19", "Page/Washer/List2.html"); break;
+                   case 18: loadData("page15", "Page/Washer/Agitatorpart.html"); break;
+                   case 19: loadData("page20", "Page/Washer/List3.html"); break;
+                   case 20: loadData("page16", "Page/Washer/washerfinal.html"); break;
            }
      
-      
+           }
+           myScroll.refresh();
        });
   
 
