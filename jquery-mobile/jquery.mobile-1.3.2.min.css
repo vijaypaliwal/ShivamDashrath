@@ -148,7 +148,7 @@
         left: 0;
     }
 
-    #Microwaveheader
+    #Microwaveheader 
     {
         color: #000;
         text-align: center;
@@ -159,6 +159,20 @@
         left: 0;
         width: 100%;
          background-color: rgb(10,148,68) !important;
+        padding: 0;
+        border-top: 1px solid #444;
+    }
+      #Electricrangeheader
+    {
+        color: #000;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 100px;
+        color: #fff;
+        top: 0;
+        left: 0;
+        width: 100%;
+         background-color: rgb(247,147,29) !important;
         padding: 0;
         border-top: 1px solid #444;
     }
