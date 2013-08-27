@@ -6,6 +6,14 @@
 <script type="application/javascript" src="iscroll.js"></script>
 
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi" />
+<script>
+    var myScroll;
+    setTimeout(function () {
+        myScroll = new iScroll('wrapper', { zoom: true });
+    }, 200);
+    // document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    document.addEventListener('load', loaded, false);
+</script>
 
 <style>
     .pagesList {
@@ -35,7 +43,7 @@
     </div>
 
 
-    <div id="wrapper">
+   <div id="wrapper">
         <div id="scroller">
             <ul class="pagesList">
                 <li id="page1">Loading.....</li>
@@ -47,6 +55,13 @@
                 <li id="page7">Loading.....</li>
                 <li id="page8">Loading.....</li>
                 <li id="page9">Loading.....</li>
+                <li id="page10">Loading.....</li>
+                <li id="page11">Loading.....</li>
+                <li id="page12">Loading.....</li>
+                <li id="page13">Loading.....</li>
+                <li id="page14">Loading.....</li>
+                <li id="page15">Loading.....</li>
+                <li id="page16">Loading.....</li>
             </ul>
 
         </div>
@@ -76,22 +91,34 @@
 
 
 <script>
-    $(document).ready(function () {
-        for (var i = 0; i < 10; i++) {
-            switch (i) {
-                case 0: loadData("page1", "index.html"); break;
-                case 1: loadData("page2", "Page/Washer/main.html"); break;
-                case 2: loadData("page3", "Page/Washer/menu.html"); break;
-                case 3: loadData("page4", "Page/Washer/toploader.html"); break;
-                case 4: loadData("page5", "Page/Washer/frontloader.html"); break;
-                case 5: loadData("page6", "Page/Washer/bottom.html"); break;
-                case 6: loadData("page7", "Page/Washer/bottom1.html"); break;
-                case 7: loadData("page8", "Page/Washer/nowthen.html"); break;
-                case 8: loadData("page9", "Page/Washer/Popularpart.html"); break;
-            }
-        }
-        myScroll.refresh();
-    });
+  
+       $(document).ready(function () {
+           debugger;
+
+           for (var i = 0; i < 16; i++) {
+        
+               loadData("page1", "index.html");
+               loadData("page2", "Page/Washer/main.html"); 
+               loadData("page3", "Page/Washer/menu.html"); 
+               loadData("page4", "Page/Washer/toploader.html"); 
+               loadData("page5", "Page/Washer/frontloader.html"); 
+               loadData("page6", "Page/Washer/bottom.html"); 
+               loadData("page7", "Page/Washer/bottom1.html"); 
+               loadData("page8", "Page/Washer/Evolution.html"); 
+               loadData("page9", "Page/Washer/Evolution1.html"); 
+               loadData("page10", "Page/Washer/nowthen.html"); 
+               loadData("page11", "Page/Washer/popularpart.html"); 
+               loadData("page12", "Page/Washer/Evolution2.html"); 
+               loadData("page13", "Page/Washer/controlparts.html"); 
+               loadData("page14", "Page/Washer/Brakeclutch.html"); 
+               loadData("page15", "Page/Washer/Agitatorpart.html"); 
+               loadData("page16", "Page/Washer/washerfinal.html"); 
+           }
+     
+      
+       });
+  
+
     function loadData(id, url) {
 
         $("#" + id).load(url);
