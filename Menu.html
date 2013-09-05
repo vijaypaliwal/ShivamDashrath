@@ -1,0 +1,102 @@
+﻿<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.3.2.min.css" />
+<script src="jquery-mobile/jquery-1.9.1.min.js"></script>
+<script src="jquery-mobile/jquery.mobile-1.3.2.min.js"></script>
+
+
+<div data-role="page" id="mypanel" >
+     
+
+    <div class="menucss">
+
+           <h3 style="font-weight:normal;">Basic Training Guide</h3>
+
+        <ul data-role="" data-inset="false" >
+              <li><div style="color:#Fc7964"  onclick="RedirectTohWasher();" title="Washer menu">Washer</div></li>
+              <li><div style="color:#AD6161" onclick="RedirectTohDryer();" title="Dryer menu">Dryer</div></li>
+              <li><div style="color:#77BCB3" onclick="RedirectTohDishwasher();" title="Washer menu">Dishwasher</div></li>
+            <li><div style="color:green;" onclick="RedirectTohMicrowave();" title="Washer menu">Microwave</div></li>
+              <li><div style="color:#E2A56E;" onclick="RedirectTohElectricrange();" title="Washer menu">Electricrange</div></li>
+              <li><div style="color:#E66259;" onclick="RedirectTohGasrange();" title="Washer menu">Gasrange</div></li>
+            <li><div style="color:#687592;" onclick="RedirectTohRoomac();" title="Washer menu">Room air conditioner</div></li>
+                <li><div style="color:#8FDA67;" onclick="RedirectTohRefrigerator();" title="Washer menu">Refrigerator</div></li>
+               <li><div style="color:#F57A64;" onclick="RedirectTohCentralac();" title="Washer menu">Central air conditioner</div></li>
+             
+        </ul>
+
+    </div>
+
+    <div style="margin-top:-5%;">
+         <img style="height:100px; width:100px; float:left; margin-left:5%;" src="eye.png" alt="" />
+         <img style="height:100px; width:100px; float:right; margin-right:5%" src="covertable.png" alt="" />
+       
+
+    </div>
+    </div>
+<style>
+.menucss
+{
+    background-color: #629769;
+margin-left:10px;
+margin-right:10px;
+margin-top:30px;
+vertical-align: middle;
+
+
+
+border: 12px solid #9D6826;
+}
+
+    .menucss ul li
+    {
+        color:#fff !important;
+        cursor:pointer;
+        list-style:none;
+        padding:10px;
+        font-size:21px;
+     
+        text-shadow:none;
+    }
+    </style>
+
+<script>
+    function RedirectTohWasher() {
+        window.location.href = "Page/Washer/Washerhistory.html";
+
+    }
+    function RedirectTohDryer() {
+
+        window.location.href = "Page/Dryer/Dryerhistory.html";
+
+
+    }
+    function RedirectTohDishwasher() {
+        window.location.href = "Page/Dishwasher/Dishwasherhistory.html";
+
+    }
+    function RedirectTohMicrowave() {
+        window.location.href = "Page/Microwave/Microwavehistory.html";
+
+    }
+    function RedirectTohElectricrange() {
+        window.location.href = "Page/Electricrange/Electricrangehistory.html";
+
+    }
+    function RedirectTohGasrange() {
+        window.location.href = "Page/Gasrange/Gasrangehistory.html";
+
+    }
+    function RedirectTohRoomac() {
+        window.location.href = "Page/Roomac/Roomachistory.html";
+
+    }
+    function RedirectTohRefrigerator() {
+        window.location.href = "Page/Refrigerator/Refrigeratorhistory.html";
+
+    }
+    function RedirectTohCentralac() {
+        window.location.href = "Page/Centralac/Centralachistory.html";
+
+    }
+
+
+</script>
